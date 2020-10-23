@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleSymbols;\f2\fnil\fcharset0 STIXGeneral-Regular;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Graph Theory Definitions\
+Chapter 9\
+Graph LaTeX: G = (V,E)G=(V,E)\
+Elements LaTeX: vv of LaTeX: VV are called vertices. Elements LaTeX: (a,b)(a,b) of LaTeX: EE are called edges.\
+Simple Graph\
+A graph with no loops or multiple edges. This is usually the default.\
+Directed Graph (aka Digraph)\
+Edges LaTeX: (a,b)(a,b) and LaTeX: (b,a)(b,a) are considered different - the first goes from LaTeX: aa to LaTeX: bb, the second goes from LaTeX: bb to LaTeX: aa (drawn with arrows instead of line segments).\
+Degree of a vertex ("LaTeX: \\text\{deg\}(v)deg(v)")\
+The number of edges at a vertex.\
+(A directed graph has in-degree and out-degree at each vertex.)\
+Trail\
+A sequence of distinct edges LaTeX: e_1e_2...e_ne1e2...en where LaTeX: e_1 = (v_1,v_2)e1=(v1,v2), LaTeX: e_2 =(v_2, v_3)e2=(v2,v3),...,LaTeX: e_n = (v_n,v_\{n+1\})en=(vn,vn+1), where edges can't repeat, but vertices can repeat.\
+Walk\
+A trail with possibly repeating edges.\
+Path\
+A trail with no repeat vertices.\
+Closed Trail (or Walk or Path)\
+Where LaTeX: v_\{n+1\} = v_1vn+1=v1\uc0\u8203 \u8203 .\
+Euler/Eulerian trail\
+A trail in a graph LaTeX: GG that uses all of the edges.\
+Note: it's a trail, so each edge appears exactly once.\
+Cycle\
+A closed path (only repeated vertex is LaTeX: v_\{n+1\} = v_1vn+1=v1.)\
+Hamiltonian Path\
+A path in a graph that uses all of the vertices.\
+Hamiltonian Cycle\
+A cycle in a graph that uses all of the vertices.\
+Subgraph of LaTeX: G = (V,E)G=(V,E)\
+Any graph LaTeX: H = (V',E')H=(V\uc0\u8242 ,E\u8242 ) where LaTeX: V' \\subseteq VV\u8242 
+\f1 \uc0\u8838 
+\f0 V, and LaTeX: E' \\subseteq EE\uc0\u8242 
+\f1 \uc0\u8838 
+\f0 E.\
+Induced Subgraph of LaTeX: G = (V,E)G=(V,E)\
+A subgraph LaTeX: H = (V',E')H=(V\uc0\u8242 ,E\u8242 ) is an induced subgraph if it contains all the edges LaTeX: (a,b)(a,b) of LaTeX: GG which have LaTeX: a,b \\in V'a,b
+\f1 \uc0\u8712 
+\f0 V\uc0\u8242 \u8203 \u8203  (i.e. it contains all the edges from the original graph that go between vertices in the subgraph.)\
+Connected Graph\
+For every pair of vertices LaTeX: a,ba,b there is a path LaTeX: aa to LaTeX: bb.\
+Connected Component of a Vertex LaTeX: vv in LaTeX: GG\
+The largest connected (induced) subgraph of LaTeX: GG containing LaTeX: vv.\
+Note: any graph can be partitioned into some number LaTeX: kk connected components. In this case we'd say it is LaTeX: kk-connected.\
+Therefore "connected" = "1-connected".\
+Strongly Connected (Directed) Graph\
+(For directed graphs.) For every pair of vertices LaTeX: a,ba,b there is a directed path LaTeX: aa to LaTeX: bb.\
+Balanced (Directed) Graph\
+For all vertices LaTeX: vv, we have LaTeX: \\text\{in-deg\}(v) = \\text\{out-deg\}(v)in-deg(v)=out-deg(v).\
+Complement of a Graph LaTeX: GG\
+LaTeX: \\overline\{G\}G
+\f2 \uc0\u9135 \u9135 \u9135 \u9135 
+\f0  has the same vertices, but all and only the edges between them that are not in LaTeX: GG.\
+Complete (Simple) Graph\
+All possible edges are in the graph (i.e. there is an edge between every pair of vertices. Written LaTeX: K_nKn if there are  LaTeX: nn-vertices.\
+Tournament\
+Take a LaTeX: K_nKn and add directions to all the edges (i.e. "orient" it).\
+Chapter 10\
+Minimally-connected Graph\
+Removing a single edge disconnects the graph.\
+Tree\
+A connected, but minimally-connected graph. Equivalently, a connected graph with no cycles. Or, a connected graph with a unique path connecting any two vertices.\
+Rooted Tree\
+Take a tree, and (arbitrarily) pick a vertex to call the root vertex.  The result is a rooted tree.  Sometimes they are directed graphs, in which case we typically either have all of the edges directed away from the root, or directed toward the root.\
+A vertex LaTeX: cc in a tree is a child vertex of a vertex LaTeX: pp if it is adjacent to LaTeX: pp and and which is farther from the root than LaTeX: pp.  In this case, LaTeX: pp is called the parent vertex of LaTeX: cc.\
+Spanning Tree\
+A subgraph of a connected simple graph LaTeX: GG which is itself a tree and which contains every vertex of LaTeX: GG. (i.e. can be obtained from LaTeX: GG by deleting as many edges as possible so that the result is minimally-connected.)\
+Complete LaTeX: kk-ary Tree\
+A rooted tree in which every vertex has either LaTeX: kk or 0 children.\
+Chapter 11\
+Colouring of a Graph\
+A choice of colours for the vertices so that adjacent vertices are assigned different colours (aka a "proper" colouring). If LaTeX: GG is colourable with LaTeX: kk colours, we say it is LaTeX: kk-colourable. note: it doesn't have to be a minimal colouring.\
+Chromatic number of LaTeX: GG, LaTeX: \\chi(G)\uc0\u967 (G)\
+The minimal number LaTeX: kk so that LaTeX: GG is LaTeX: kk-colourable.\
+Bipartite graph\
+A 2-colourable graph. Alternately, LaTeX: VV can be written as the disjoint union LaTeX: X \\cup YX
+\f1 \uc0\u8746 
+\f0 Y ("left" and "right" sides) in a way so that LaTeX: GG has no edges LaTeX: (a,b)(a,b) with LaTeX: a,b\\in Xa,b
+\f1 \uc0\u8712 
+\f0 X or LaTeX: a,b\\in Ya,b
+\f1 \uc0\u8712 
+\f0 Y.\
+Complete bipartite graph, LaTeX: K_\{n,m\}Kn,m\uc0\u8203 \u8203 \
+A bipartite graph with LaTeX: |X|=n, |Y|=m|X|=n,|Y|=m and where every vertex in LaTeX: XX is adjacent to every vertex in LaTeX: YY. (i.e. it has the most edges possible while remaining bipartite.)\
+Matching in LaTeX: GG (aka an Independent Set)\
+A subset LaTeX: MM of edges so that no two edges are adjacent (i.e. we don't have any pair of edges LaTeX: (a,b)(a,b) and LaTeX: (b,c)(b,c) in LaTeX: MM).\
+Maximal matching\
+A matching which cannot be extended by adding any more edges.\
+Maximum matching\
+A matching which is as large as the largest possible matching.\
+Perfect matching\
+A matching MM where every vertex of LaTeX: GG is covered by an edge in LaTeX: MM.\
+LaTeX: XX-matching (for a bipartite graph LaTeX: GG, with vertex sets LaTeX: XX and LaTeX: YY)\
+A matching LaTeX: MM where every vertex in LaTeX: XX is matched with a vertex in LaTeX: YY. note: LaTeX: |X| \\leq |Y||X|\uc0\u8804 |Y| is a must here, but it cannot be a perfect matching unless LaTeX: |X|=|Y||X|=|Y|.)\
+Neighbourhood of a subset LaTeX: TT of vertices\
+The set of vertices LaTeX: N(T)N(T) consisting of all vertices adjacent to a vertex in LaTeX: TT.\
+Hall's Condition (on a bipartite graph)\
+That for all subsets LaTeX: T \\subseteq XT
+\f1 \uc0\u8838 
+\f0 X, LaTeX: |T|\\leq |N(T)||T|\uc0\u8804 |N(T)|.\
+LaTeX: MM-Alternating Path (given a matching LaTeX: MM in a graph LaTeX: GG)\
+A path LaTeX: P=v_1v_2...v_kP=v1v2...vk\uc0\u8203 \u8203  so that LaTeX: (v_i,v_\{i+1\})\\in M(vi,vi+1)
+\f1 \uc0\u8712 
+\f0 M if and only if LaTeX: (v_\{i+1\},v_\{i+2\})\\notin M(vi+1,vi+2)
+\f1 \uc0\u8713 
+\f0 M. i.e. where edges alternate between being in and out of LaTeX: MM.\
+MM-Augmenting Path\
+An MM alternating path with initial and end vertices (LaTeX: v_1v1\uc0\u8203 \u8203  and LaTeX: v_kvk\u8203 \u8203 ) not adjacent to an edge of LaTeX: MM.\
+Chapter 12\
+Plane depiction\
+A drawing of a graph on a plane surface so that no two of its edges intersect.\
+Planar graph\
+A graph which has some plane depiction.\
+Faces (of a plane depiction of a graph)\
+The regions of the plane which the edges of the graph partition the plane into. The set of faces is written LaTeX: FF.\
+Edge-equivalence of graphs LaTeX: GG and LaTeX: HH\
+If LaTeX: HH can be obtained from G by repeatedly applying the following operations in some sequence:\
+Remove a vertex LaTeX: vv of degree 2 with incident edges LaTeX: (a,v)(a,v) and LaTeX: (v,b)(v,b) from LaTeX: GG and put in an edge LaTeX: (a,b)(a,b) to replace it.\
+The reverse of the previous: remove an edge LaTeX: (a,b)(a,b), and replace it with a vertex LaTeX: vv and two edges LaTeX: (a,v)(a,v) and LaTeX: (v,b)(v,b).}
